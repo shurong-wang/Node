@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>classList</title>
+	<style>
+        p, dl, dt, dd{
+            padding: 0;
+            margin: 0;
+        }
+		div, button{
+			font-size: 20px;
+			font-family: "Microsoft Yahei", sans-serif;
+			width: 200px;
+			text-align: center;
+			margin: 10px 0;
+		}
+
+		div.city {
+			height: 100px;
+			line-height: 100px;
+			border: 1px solid #A9A9A9;
+		}
+
+		button.where {
+			color: white;
+			height: 50px;
+			border-radius: 5px;
+			box-shadow: 2px 2px 2px #999;
+			background: linear-gradient(135deg, white, gray);
+		}
+
+        div.city.hover{
+            color: white;
+            background: rgba(25, 125, 25, 0.5);
+        }
+
+        div.city.copy{
+            box-shadow: 5px 5px 5px #999;
+            background: linear-gradient(135deg, rgba(145, 125, 25, 0.5), rgba(25, 125, 25, 0.5));
+            font-size: 15px;
+            text-align: left;
+            line-height: 30px;
+            text-indent: 2em;
+        }
+        div.city.copy p:nth-of-type(1) {
+            font-size: 17px !important;
+        }
+	</style>
+</head>
+<body>
+	<div class="city hover" data-index="1" data-postcode="100000" data-area-code="010">北京</div>
+	<div class="city" data-index="2" data-postcode="200000" data-area-code="012">上海</div>
+	<div class="city" data-index="3" data-postcode="510000" data-area-code="020">广州</div>
+	<div class="city" data-index="4" data-postcode="518000" data-area-code="0755">深圳</div>
+	<button id="where" class="where">去哪儿</button><br>
+
+	<script type="text/javascript">
+        //var citys = Array.prototype.slice.call(document.querySelectorAll('.city'));
+        var citys = [].slice.call(document.querySelectorAll('.city'));
+        var selbtn = document.querySelector('#where');
+        var timer = null, toggle = true, index = 0;
+
+        // 自动循环城市
+        cityLoop(0);
+
+        // 开始/结束
+        selbtn.addEventListener('click', function () {
+            if(toggle){
+                index = cityStop(index);
+            }else{
+                cityLoop(index);
+            }
+        }, false);
+
+        // 城市循环
+        function cityLoop(idx){
+            toggle = true;
+            idx = idx % citys.length || 0;
+            timer = setInterval(function(){
+                citys.forEach(function (elem) {
+                    elem.classList.contains("hover") && elem.classList.remove('hover');
+                    elem.classList.contains("copy") && elem.classList.remove('copy');
+                    elem.dataset.city && (elem.innerHTML = elem.dataset.city);
+                });
+                //citys[idx % citys.length].classList.toggle('hover');
+                citys[idx % citys.length].classList.add('hover');
+                idx ++;
+            }, 200);
+        }
+
+        // 循环结束
+        function cityStop(idx){
+            var selcity = document.querySelector('.hover');
+            if(idx === selcity.dataset.index){
+                return idx;
+            }
+            clearInterval(timer);
+            toggle = false;
+            var city = {
+                cityName : selcity.innerText,
+                postcode : selcity.dataset.postcode,
+                areaCode : selcity.dataset.areaCode
+            }
+            city = JSON.parse(JSON.stringify(city)); // 转换成严格格式 JSON
+            // var copyNode = selcity.cloneNode(true);
+            // copyNode.classList.add('copy');
+            // selcity.parentNode.insertBefore(copyNode, selcity);
+
+            selcity.innerHTML = '<p>' + city.cityName + '</p><p>邮编：' + city.postcode + '</p><p>区号：' + city.areaCode + '</p>';
+            selcity.dataset.city = city.cityName;
+            selcity.classList.add('copy');
+            return selcity.dataset.index;
+        }
+
+	</script>
+</body>
+</html>

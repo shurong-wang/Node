@@ -1,0 +1,4 @@
+
+jade --client --no-debug runtime.jade --out compiled
+
+jade runtime.jade -P -O data.json --out compiled

@@ -1,0 +1,11 @@
+
+# Nodemon 介绍
+Nodemon 是一款非常实用的工具，用来监控你 node.js 源代码的任何变化和自动重启你的服务器。
+
+# Nodemon 安装
+npm install -g nodemon
+
+# Nodemon 使用（nodemon 来代替 node 来启动应用）
+nodemon app.js
+nodemon app.js localhost 3000
+nodemon --debug app.js 3000

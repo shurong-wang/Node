@@ -1,0 +1,23 @@
+{
+  "name": "node-movie",
+  "version": "0.0.1",
+  "authors": [
+    "Yida"
+  ],
+  "description": "a magic  movie website",
+  "keywords": [
+    "movie"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.1.0"
+  }
+}

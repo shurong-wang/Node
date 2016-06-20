@@ -1,0 +1,55 @@
+
+# pm2 介绍
+pm2 是一个带有负载均衡功能的Node应用的进程管理器。
+当你要把你的独立代码利用全部的服务器上的所有CPU，并保证进程永远都活着，0秒的重载， PM2是完美的。
+它非常适合IaaS结构，但不要把它用于PaaS方案（随后将开发Paas的解决方案）。
+
+# SaaS、PaaS 和 IaaS 云服务模式
+SaaS 软件即服务，例如 Google 的 Gmail 邮箱服务，面向应用型用户
+PaaS 平台即服务，例如 Google 的 GAE，面向开发型用户
+IaaS 基础架构即服务，例如亚马逊的 AWS，IaaS 对于不知道新推出的应用程序/网站会有多成功的创业公司来说非常有用
+
+# pm2 主要特性
+1. 内建负载均衡（使用 Node cluster 集群模块）
+2. 后台运行
+3. 0 秒停机重载，仅能用于web应用
+4. 具有 Ubuntu 和 CentOS 的启动脚本
+5. 停止不稳定的进程（避免无限循环）
+6. 控制台检测
+7. 提供 HTTP API
+8. 远程控制和实时的接口 API ( Nodejs 模块，允许和 PM2 进程管理器交互 )
+
+# pm2 安装
+npm install -g pm2 
+
+# pm2 使用
+pm2 start app.js -i 4           # 后台运行pm2，启动4个app.js 
+pm2 start app.js --name server1 # 启动一个进程并把它命名为 server1
+pm2 list                        # 显示所有进程状态
+pm2 monit                       # 监视所有进程
+pm2 logs                        # 显示所有进程日志
+pm2 stop all                    # 停止所有进程
+pm2 restart all                 # 重启所有进程
+pm2 reload all                  # 0秒停机重载进程 (用于 NETWORKED 进程)
+pm2 stop 0                      # 停止指定的进程
+pm2 restart 0                   # 重启指定的进程
+pm2 startup                     # 产生 init 脚本 保持进程活着
+pm2 web                         # 运行健壮的 computer API endpoint (http://localhost:9615)
+pm2 delete 0                    # 杀死指定的进程
+pm2 delete all                  # 杀死全部进程
+
+## 运行进程的不同方式：
+pm2 start app.js -i max         # 根据有效CPU数目启动最大进程数目
+pm2 start app.js -i 3           # 启动3个进程
+pm2 start app.js -x             # 用fork模式启动 app.js 而不是使用 cluster
+pm2 start app.js -x -- -a 23    # 用fork模式启动 app.js 并且传递参数 (-a 23)
+pm2 start app.js --name server2 # 启动一个进程并把它命名为 server2
+pm2 stop server2                # 停止 server2 进程
+pm2 start app.json              # 启动进程, 在 app.json里设置选项
+
+### 启动一个进程，并生成一个日志文件：
+pm2 start app.js -i max -e err.log -o out.log  
+
+### 执行用其他语言编写的 app (fork模式):
+pm2 start my-bash-script.sh    -x --interpreter bash
+pm2 start my-python-script.py -x --interpreter python

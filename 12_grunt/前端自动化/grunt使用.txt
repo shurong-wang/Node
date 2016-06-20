@@ -1,0 +1,22 @@
+
+# 在项目中引入 grunt
+----------------------------------------------------------------------------
+# 安装 grunt 模块及相关模块
+npm install grunt --save-dev
+npm install load-grunt-tasks --save-dev
+npm install time-grunt --save-dev
+npm install jit-grunt --save-dev
+
+# 安装 grunt 基本 task 模块
+npm install grunt-contrib-copy --save-dev
+npm install grunt-contrib-clean --save-dev
+
+# 安装 JavaScript 语法检查模块（可选）
+npm install jshint-stylish --save-dev
+
+# 创建 Gruntfile.js 文件
+
+# 命令行运行 grunt 任务
+grunt 任务名称
+
+

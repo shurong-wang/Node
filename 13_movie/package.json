@@ -1,0 +1,40 @@
+{
+  "name": "node-movie",
+  "version": "0.0.1",
+  "description": "a magic  movie website",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "bcryptjs": "^2.3.0",
+    "body-parser": "*",
+    "connect-mongo": "*",
+    "connect-multiparty": "*",
+    "cookie-parser": "*",
+    "express": "*",
+    "express-session": "*",
+    "jade": "*",
+    "moment": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "serve-static": "*",
+    "underscore": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-concurrent": "*",
+    "grunt-nodemon": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-mocha-test": "*",
+    "grunt-contrib-less": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-jshint": "*",
+    "mocha": "*",
+    "should": "*",
+    "chai": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

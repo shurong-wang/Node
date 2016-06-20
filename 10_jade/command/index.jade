@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        title Jade
+    body
+        h1 #{course} Study
+        div#content.content
+            a(href='http://imooc.com', target='_blank') 慕课网
+        - var lessons = ['node', 'express', 'jade', 'mongoose']
+        each item in lessons
+            p= item
+
+        h2 浏览器端使用 jade
+        #runtime
+            script(src='../node_modules/jade/runtime.js')
+            script(src='./compiled/runtime.js')
+            script.
+                var runtimeNode = document.getElementById('runtime');
+                var runtimeHtml = template({isRuntime: true});
+                runtimeNode.innerHTML = runtimeHtml;

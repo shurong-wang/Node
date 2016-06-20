@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title> HTML5 demo</title>
+    <style>
+        header {
+            height: 150px;
+            background: #ABCDEF;
+            overflow: hidden;
+        }
+
+        nav {
+            height: 30px;
+            background: #ff9900;
+            margin-top: 120px;
+        }
+
+        nav ul li {
+            float: left;
+            list-style: none;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        div {
+            margin-top: 10px;
+            height: 900px;
+        }
+
+        section {
+            height: 900px;
+            width: 70%;
+            background: #ABCDEF;
+            float: left;
+        }
+
+        article {
+            background: #F90;
+            width: 500px;
+            margin: 0px auto;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        aside {
+            height: 900px;
+            width: 29%;
+            background: #ABCDEF;
+            float: right;
+        }
+
+        footer {
+            height: 100px;
+            background: #ABCDEF;
+            clear: both;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- 头部 -->
+<header>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li>首页</li>
+            <li>体育</li>
+            <li>娱乐</li>
+            <li>游戏</li>
+            <li>八卦</li>
+            <li>女性</li>
+            <li>房产</li>
+            <li>论坛</li>
+            <li>软件</li>
+            <li>汽车</li>
+        </ul>
+    </nav>
+</header>
+<!-- 主体 -->
+<div>
+    <!-- 章节 -->
+    <section>
+        <article>
+            <h2>桃花庵</h2>
+            <p>
+                桃花坞里桃花庵，桃花庵下桃花仙。<br/>
+                桃花仙人种桃树，又摘桃花换酒钱。<br/>
+                别人笑我太疯癫，我笑他人看不穿。<br/>
+                不见五陵豪杰墓，无花无酒锄作田。<br/>
+            </p>
+        </article>
+        <hr/>
+        <article>
+            <h2>木兰词</h2>
+            <p>
+                人生若只如初见，何事秋风悲画扇。<br/>
+                等闲变却故人心，却道故人心易变。<br/>
+                骊山语罢清宵半，泪雨零铃终不怨。<br/>
+                何如薄幸锦衣郎，比翼连枝当日愿。<br/>
+            </p>
+        </article>
+        <hr/>
+        <!-- 描绘 -->
+        <figure>
+            <figcaption>香港反占中游行</figcaption>
+            <p>2014年8月17日下午，在超过30摄氏度高温下，香港社会各界逾19万人参加了由“保普选、[1] 反占中”大联盟发起的“和平普选大游行”，表达各界落实“一国两制”方针和基本法，依法实行普选的愿望和诉求[2]
+                。</p>
+        </figure>
+        <figure>
+            <dt>Shell
+            <dt>
+            <dd>在计算机科学中，Shell俗称壳（用来区别于核），是指“提供使用者使用界面”的软件（命令解析器）。它类似于DOS下的command和后来的cmd.exe。它接收用户命令，然后调用相应的应用程序。
+            <dd>
+        </figure>
+        <hr/>
+        <!-- 进度条 -->
+        <progress id="pro" max="100" value="5"></progress>
+        <hr/>
+        <!-- 注解 -->
+        <ruby>囧
+            <rp>[</rp>
+            <rt>jiong
+                <rt>
+                    <rp>]</rp>
+        </ruby>
+        <!-- 高亮 -->
+        百度
+        <mark>营销</mark>
+        大学
+    </section>
+
+    <!-- 侧边栏-->
+    <aside>
+        <hgroup>
+            <h3>MACHENIKE M510 M510A-i5 D2机械师</h3>
+            <h3>雷神G150MG青春版 GTX850M IP</h3>
+            <h3>Dell/戴尔 灵越15(5547) Ins15M-1528</h3>
+            <h3>Acer/宏碁V5-471G-53334G50D超薄笔记本</h3>
+            <h3>Asus/华硕 S550X3317CM-SL/CB</h3>
+            <h3>联想 S400-IFI(I)I5-3337联想笔记本电脑</h3>
+            <h3>ThinkPad E540 20C6-S00A00</h3>
+        </hgroup>
+    </aside>
+</div>
+
+<!-- 页脚 -->
+<footer>
+    <hr/>
+    <small>购物指南</small>
+    <small>免费注册</small>
+    <small>开通支付宝</small>
+    <small>支付宝充值</small>
+    <small>送货入户</small>
+    <small>顺丰包邮</small>
+    <small>无忧退换货</small>
+    <small>全国联保</small>
+    <small>货票同行</small>
+    <small>支付方式</small>
+    <small>电器城商</small>
+</footer>
+
+<script type="text/javascript">
+    <!--
+    var pro = document.getElementById('pro');
+    var timer = setInterval(function () {
+        pro.value < 100 ? pro.value += 5 : pro.value = 0;
+    }, 100);
+    //-->
+</script>
+</body>
+</html>

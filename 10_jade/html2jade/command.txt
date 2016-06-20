@@ -1,0 +1,8 @@
+
+html2jade http://www.w3cplus.com/html/jade.html > decompilation/w3cplus.jade
+
+html2jade https://segmentfault.com/a/1190000000357534 > decompilation/segmentfault.jade
+
+html2jade html5.html -o decompilation
+
+html2jade classList.html -o decompilation

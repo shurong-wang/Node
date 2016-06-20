@@ -1,0 +1,16 @@
+{
+  "name": "bluebird-demo",
+  "version": "0.0.1",
+  "description": "bluebird-demo",
+  "main": "demo01.js",
+  "dependencies": {
+    "bluebird": "*"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause"
+}

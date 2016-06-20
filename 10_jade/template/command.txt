@@ -1,0 +1,12 @@
+
+jade index.jade
+
+jade index.jade -P
+
+jade index.jade -P -O data.json
+
+jade index.jade -P -O data.json --out compiled
+
+jade index.jade -P -w --out compiled
+
+jade index.jade -P -w -O data.json --out compiled

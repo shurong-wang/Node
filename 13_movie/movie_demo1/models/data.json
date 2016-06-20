@@ -1,0 +1,23 @@
+{
+    "movies": [{
+        "_id": 1,
+        "title": "机械战警",
+        "doctor": "何塞.帕迪利亚",
+        "country": "美国",
+        "language": "英语",
+        "poster": "http://image.tmdb.org/t/p/w185/jHE1jOJQILXSPudL4h94NI3TRL.jpg",
+        "year": 2014,
+        "flash": "http://player.youku.com/player.php/sid/XNjY2NDIwMTA0/v.swf",
+        "summary": "2028年，专事军火开发的机器人公司Omni Corp生产了大量装备精良的机械战警..."
+    },{
+        "_id": 2,
+        "title": "机械战警2",
+        "doctor": "何塞.帕迪利亚",
+        "country": "美国",
+        "language": "英语",
+        "poster": "http://image.tmdb.org/t/p/w185/jHE1jOJQILXSPudL4h94NI3TRL.jpg",
+        "year": 2015,
+        "flash": "http://player.youku.com/player.php/sid/XNjY2NDIwMTA0/v.swf",
+        "summary": "2028年，专事军火开发的机器人公司Omni Corp生产了大量装备精良的机械战警..."
+    }]
+}

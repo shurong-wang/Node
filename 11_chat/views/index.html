@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+          name="viewport">
+    <title>多人聊天室</title>
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/index.css"/>
+    <!--[if lt IE 8]>
+    <script src="/json3.min.js"></script>
+    <![endif]-->
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div id="loginbox">
+    <div class="login-box">
+        请输入你在聊天室的昵称
+        <br/>
+        <br/>
+        <input type="text" placeholder="请输入用户名" id="username" name="username"/>
+        <button onclick="CHAT.usernameSubmit();">提交</button>
+    </div>
+</div>
+
+<div id="chatbox" style="display:none;">
+    <div class="chatbox-header">
+        <span>Websocket 多人聊天室</span>
+        <span>
+            <span id="showusername"></span> | <a href="javascript:;" onclick="CHAT.logout()" >退出</a>
+        </span>
+    </div>
+    <div id="doc">
+        <div id="chat">
+            <div id="message" class="message">
+                <div id="onlinecount" class="onlinecount">
+                </div>
+            </div>
+            <div class="input-box">
+                <div class="input">
+                    <input id="content" name="content" type="text" maxlength="140" placeholder="请输入聊天内容，按Enter提交" >
+                </div>
+                <div class="action">
+                    <button type="button" id="mjr_send" onclick="CHAT.submit();">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/chat.js"></script>
+</body>
+</html>

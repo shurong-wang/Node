@@ -1,0 +1,7 @@
+
+# 安装 cnpm
+npm config set strict-ssl false
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+# 使用 cnpm
+cnpm install <package>

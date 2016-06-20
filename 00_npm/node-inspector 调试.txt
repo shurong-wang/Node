@@ -1,0 +1,16 @@
+
+# node-inspector 介绍
+node-inspector 可以在浏览器控制台中调试服务器端的 node.js 程序。
+
+# node-inspector 安装
+npm install -g node-inspector
+
+# node-inspector 使用
+## 启动 inspector 服务
+node-inspector &
+
+## 以 debug 模式运行 node.js 应用
+node --debug app.js 3000
+
+## 浏览器请求指定 URL 即可进行调试
+http://127.0.0.1:8080/debug?port=5858

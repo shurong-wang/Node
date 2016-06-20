@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        title 新闻频道
+        meta(charset='utf-8')
+        style(type='text/css').
+            .hover {
+                background: rebeccapurple;
+                color: #FFFFFF;
+            }
+        script(type='text/javascript').
+            console.log('Hello,Jade.');
+            window.onload = function(){
+                document.querySelector('#aside').addEventListener('mouseover', function(){
+                    this.classList.add('hover');
+                }, false);
+                document.querySelector('#aside').addEventListener('mouseout', function () {
+                    this.classList.remove('hover');
+                }, false);
+            };
+    body
+        h1 Jade - node 模板引擎
+        if true
+            p You are amazing
+        else
+            p Get on it!
+        #box.box
+            ul
+                li 体育新闻
+                li 娱乐新闻
+                li 社会新闻
+                li 财经新闻
+        p#aside.aside.
+            Jade is a terse and simple templating language with a strong focus on performance and powerful features.
