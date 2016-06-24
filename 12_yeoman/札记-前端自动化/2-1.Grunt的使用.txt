@@ -1,5 +1,5 @@
 
-# 在项目中引入 grunt
+# 在项目中后期引入 grunt
 ----------------------------------------------------------------------------
 # 安装 grunt 模块及相关模块
 npm install grunt --save-dev
@@ -14,9 +14,9 @@ npm install grunt-contrib-clean --save-dev
 # 安装 JavaScript 语法检查模块（可选）
 npm install jshint-stylish --save-dev
 
-# 创建 Gruntfile.js 文件
+# 创建配置 Gruntfile.js 文件
 
 # 命令行运行 grunt 任务
-grunt 任务名称
+grunt [taskname]
 
 

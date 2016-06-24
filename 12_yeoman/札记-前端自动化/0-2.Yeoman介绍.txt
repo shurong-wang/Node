@@ -1,0 +1,51 @@
+
+# Yeoman --前端开发脚手架工具，自动将最佳实践和工具整合起来构建项目骨架
+Yeoman 其实是三类工具的合体：
+1. yo --- 脚手架，自动生成工具
+2. Grunt、gulp --- 自动化构建工具 （最初只有grunt，之后假如了gulp）
+3. Bower、npm --- 包管理工具 （原来是bower，之后假如了npm）
+三类工具各自独立，yo相当于一个粘合剂，把这些工具粘合在一起。
+
+# 官网地址
+----------------------------------
+http://yeoman.io/
+http://gruntjs.com/
+http://gulpjs.com/
+https://bower.io/
+
+
+# 按需安装语言环境
+----------------------------------
+https://nodejs.org/en/
+https://www.python.org/
+http://rubyinstaller.org/
+
+
+# 安装 Yeoman
+----------------------------------------
+npm install -g yo
+yo --version
+
+
+# 安装 grunt
+----------------------------------------
+npm install -g grunt-cli
+npm install --save-dev grunt        
+npm install --save-dev time-grunt
+npm install --save-dev jit-grunt
+npm install --save-dev jshint-stylish
+
+grunt -V
+
+
+# 安装 gulp
+----------------------------------------
+npm install -g gulp
+
+gulp -v
+
+
+# 安装 bower
+----------------------------------------
+npm install -g bower
+bower -v

@@ -9,6 +9,9 @@ npm init
 # 安装模块
 npm install <package>
 
+# 安装模块指定版本
+npm install <package>@version
+
 # 安装同时，把模块和版本号添加到 package.json 文件 dependencies 部分
 npm install <package> --save
 

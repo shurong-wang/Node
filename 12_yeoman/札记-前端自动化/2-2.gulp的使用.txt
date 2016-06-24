@@ -1,0 +1,6 @@
+
+# 查看 gulp 项目是否构建成功
+gulp serve
+
+# 执行 gulp 任务
+gulp [taskname]

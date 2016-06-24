@@ -1,0 +1,18 @@
+
+# 使用 yo 生成项目架构
+----------------------------------------------------------------------------
+## 搜索 yeoman 生成器（需要翻墙）
+http://yeoman.io/generators/
+
+## 安装对应生成器（如：webapp）
+注意：
+1. 需要在生成器名称前加前缀：'generator-'
+2. 有时 npm 被墙，需要换用 cnpm 安装
+npm install -g generator-webapp
+
+## 生成项目架构（yo 生成器名 应用名）
+yo webapp myapp
+
+
+
+

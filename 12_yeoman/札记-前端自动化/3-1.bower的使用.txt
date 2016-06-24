@@ -1,0 +1,44 @@
+
+# 强烈注意
+windows 下的 cmd 控制台执行 bower install 安装包
+在 windows 下，建议使用 Git Bash 执行 bower 命令
+
+
+# bower 初始化
+bower init
+
+
+# 配置 .bowerrc 文件，指定包安装路径
+进入项目根目录，找到（新建） .bowerrc 文件，修改（添加）配置项：
+{
+  "directory" : "public/lib"
+}
+
+
+# 使用 bower 安装包
+## 搜索在 bower 官网注册的包
+https://bower.io/search/
+
+## 通过 bower.json 文件安装包
+bower install
+
+## 通过 bower 官网安装包
+bower install jquery
+
+## 通过 GitHub 安装包
+bower install jquery/jquery
+bower install https://github.com/jquery/jquery
+
+## 通过下载 URL 安装包
+bower install https://code.jquery.com/jquery-3.0.0.min.js
+
+
+# 其他 bower 命令
+bower list              列出项目已安装的包
+bower home jquery       通过浏览器打开一个包的github发布页
+bower info jquery       查看包的信息
+bower lookup jquery     根据包名查询包的URL
+bower prune jquery      删除项目无关的包
+bower search jquery     搜索包
+bower update jquery     更新项目的包
+bower uninstall jquery  删除项目的包
