@@ -1,0 +1,13 @@
+
+
+# WebPack
+WebPack 是一款[模块加载器]兼[打包工具]，它能把各种静态资源（js/css/image等）都作为模块来使用和处理。
+
+# 配置文件
+webpack.config.js
+
+# WebPack 的优势：
+1. WebPack 同时支持 commonJS 和 AMD/CMD，方便代码迁移
+2. 不仅仅能被模块化 JS ，还包括 CSS、Image 等
+3. 能替代部分 grunt/gulp 的工作，如打包、压缩混淆、图片转base64
+4. 扩展性强，插件机制完善，特别是支持 React 热插拔的功能
