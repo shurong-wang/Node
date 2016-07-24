@@ -30,6 +30,9 @@ npm uninstall -g <package>
 # 查看全局安装模块
 npm ls -g
 
+# 模糊查找全局安装模块中
+npm ls -g --depth=1 2>/dev/null | grep generator-
+
 # 查看更新当前目录下 node_modules 子目录里面安装模块
 npm ls
 
