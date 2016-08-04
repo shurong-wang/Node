@@ -3,6 +3,9 @@
 # 安装/更新 npm
 npm install -g npm
 
+# 查看包信息
+npm info <package>
+
 # 引导创建一个 package.json 文件
 npm init
 
